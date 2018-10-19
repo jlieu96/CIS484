@@ -8,7 +8,7 @@ InvoiceID varchar(20) NOT NULL,
 Amount money not null,
 PaymentType varchar(50) null,
 PaymentStatus varchar(50) not null,
-LastUpdatedBy nchar(10) NOT NULL,
+LastUpdatedBy varchar(10) NOT NULL,
 LastUpdated date NOT NULL,
 constraint PK_Invoice primary key(InvoiceID));
 
@@ -26,10 +26,10 @@ CREATE TABLE [dbo].[OnlineProgram](
 	[NumberOfKids] [int] NULL,
 	[NumberOfAdult] [int] NULL,
 	[Grade] [varchar](50) NULL,
-	[Email] [nchar](10) NULL,
+	[Email] [varchar](60) NULL,
 	[Theme] [nchar](10) NULL,
 	[InvoiceID] [varchar](20) NOT NULL,
-	LastUpdatedBy varchar(50) NOT NULL,
+	LastUpdatedBy [varchar](50) NOT NULL,
 	LastUpdated date NOT NULL,
 CONSTRAINT PK_OnlineProgID PRIMARY KEY (OnlineProgramID),
 CONSTRAINT FK_OLPayment FOREIGN KEY (InvoiceID) references
@@ -139,6 +139,7 @@ create table [dbo].[Passwd](
 	UserName varchar(50) not null,
 	PasswordHash varchar(128) not null,
 	PasswordSalt varchar(50) not null,
+	LastUpdated date NOT NULL,
 CONSTRAINT PK_PersonPwdID primary key (PersonID),
 CONSTRAINT FK_PersonPwdID FOREIGN KEY (PersonID) references
 Person);

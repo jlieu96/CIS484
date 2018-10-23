@@ -40,4 +40,69 @@ public class Program
     {
         return this.onOffSite;
     }
+    
+    public String getProgramStatus()
+    {
+        return this.programStatus;
+    }
+
+    public String getProgramAddress()
+    {
+        return this.programAddress;
+    }
+
+    public String getCity()
+    {
+        return this.city;
+    }
+
+    public String getCounty()
+    {
+        return this.county;
+    }
+
+    public String getProgramMonth()
+    {
+        return this.programMonth;
+    }
+
+    public String getProgramDate()
+    {
+        return this.programDate;
+    }
+
+    public int getNumberOfKids()
+    {
+        return this.numberOfKids;
+    }
+
+    public int getNumberOfAdults()
+    {
+        return this.numberOfAdults;
+    }
+
+    public String getBirds()
+    {
+        return this.birds;
+    }
+
+    public String getMammals()
+    {
+        return this.mammals;
+    }
+
+    public String getReptiles()
+    {
+        return this.reptiles;
+    }
+
+    public String getPayStatus()
+    {
+        return this.payStatus;
+    }
+
+    public String getInvoiceID()
+    {
+        return this.invoiceID;
+    }
 }

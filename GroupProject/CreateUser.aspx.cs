@@ -21,11 +21,12 @@ public partial class CreateUser : System.Web.UI.Page
             //COMMIT VALUES
             //try
             //{
-            System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
-            sc.ConnectionString = "Data Source=dbwildlife.cyttxuxgl1ng.us-east-1.rds.amazonaws.com;Database=WildLifeCenter;User ID=testuser484;Password=password123;"; ; // connect to PBKDF2 database
-                                                                                                       //lblStatus.Text = "Database Connection Successful";
+            System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["AWSConnection"].ConnectionString);
+            
+            
 
             sc.Open();
+            
 
             System.Data.SqlClient.SqlCommand createUser = new System.Data.SqlClient.SqlCommand();
             createUser.Connection = sc;

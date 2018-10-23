@@ -24,8 +24,8 @@ public partial class Login : System.Web.UI.Page
         // connect to database to retrieve stored password string
         //try
         //{
-            System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection();
-        sc.ConnectionString = "Data Source=dbwildlife.cyttxuxgl1ng.us-east-1.rds.amazonaws.com;Database=WildLifeCenter;User ID=testuser484;Password=password123;";
+        System.Data.SqlClient.SqlConnection sc = new System.Data.SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["AWSConnection"].ConnectionString);
+        
         lblStatus.Text = "Database Connection Successful";
 
             sc.Open();

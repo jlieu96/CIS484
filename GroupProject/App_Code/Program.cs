@@ -105,4 +105,14 @@ public class Program
     {
         return this.invoiceID;
     }
+
+    public String getLastUpdatedBy()
+    {
+        return this.lastUpdatedBy;
+    }
+
+    public String getLastUpdated()
+    {
+        return this.lastUpdated;
+    }
 }
